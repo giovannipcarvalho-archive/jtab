@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>jQuery tabs</title>
+	<!-- incluindo jquery. recomendo baixar a versao mais recente e salvar na mesma pasta -->
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<!-- incluindo script das abas -->
+	<script src="jtab-0.1.js"></script>
+
+	<style>
+		* {
+				font: 11pt Arial;
+		}
+
+		a {
+				text-decoration: none;
+		}
+
+		/* classe do menu ativo (aba selecionada) */
+		.jtabactive {
+				text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id='navigation'>
+		<!-- Declarando itens do menu class=jtabnav e nav=id_da_aba -->
+		<a href='javascript:void(0);' class='jtabnav' nav='main'>Main</a>
+		<a href='javascript:void(0);' class='jtabnav' nav='about'>About</a>
+		<a href='javascript:void(0);' class='jtabnav' nav='contact'>Contact</a>
+	</div>
+
+	<!-- aba principal class = jtab jmaintab -->
+	<div id='main' class='jtab jmaintab'>
+		Main tab
+		<p>Tutorial</p>
+		1. Todas as divs que serão abas devem ter a classe <i>jtab</i></br>
+		2. A tab principal deve incluir também(além da classe <i>jtab</i>) a classe <i>jmaintab</i></br>
+		3. Cada menu para uma aba deve ter a classe <i>jtabnav</i> e possuir um atributo <i>nav</i> igual ao ID da div da tab correspondente</br>
+	</div>
+
+	<!-- aba class=jtab -->
+	<div id='about' class='jtab'>
+		About tab
+		<p>Funcionamento</p>
+		1. Todas as abas <i>jtab</i>, exceto a <i>jtabmain</i> serão ocultas quando a página carregar</br>
+		2. Quando um menu de navegação <i>jtabnav</i> for clicado, a aba relacionada ao seu atributo <i>nav</i> será exibida e a anterior será ocultada.</br>
+	</div>
+
+	<!-- aba class=jtab -->
+	<div id='contact' class='jtab'>
+		Contat tab
+		<p>Customização</p>
+		1. O menu de navegação <i>jtabnav</i> ganha a classe <i>jtabactive</i> quando ele é clicado</br>
+		2. A classe é removida quando ele não mais corresponde a aba ativa</br>
+	</div>
+	
+</body>
+</html>
